@@ -8,7 +8,11 @@ window.onclick = () => {
 	main();
 }
 function main() {
-
+	const root = document.getElementById('root');
+	const ChangeBtn = document.getElementById('change-btn');
+	ChangeBtn.addEventListener('click', function() {
+		const rgbColor = genrateRGBColor();
+	})
 }
 // step 2 - random color generator function
 function genrateRGBColor() {
@@ -16,6 +20,7 @@ function genrateRGBColor() {
 	const red = Math.floor(Math.random() * 255);
 	const green = Math.floor(Math.random() * 255);
 	const blue = Math.floor(Math.random() * 255);
+	return `rgb(${red}, ${green}, ${blue})`;
 }
 // step 3- collect all necessary references
 
