@@ -6,13 +6,14 @@ Change the background color by generating random rbg color by clicking a button 
 // step 1 - create onload handler
 window.onclick = () => {
 	main();
-}
+};
 function main() {
 	const root = document.getElementById('root');
-	const ChangeBtn = document.getElementById('change-btn');
-	ChangeBtn.addEventListener('click', function() {
-		const rgbColor = genrateRGBColor();
-	})
+	const changeBtn = document.getElementById('change-btn');
+	changeBtn.addEventListener('click', function() {
+		const bgColor = genrateRGBColor();
+		root.style.backgroundColor = bgColor;
+	});
 }
 // step 2 - random color generator function
 function genrateRGBColor() {
